@@ -1,1 +1,1 @@
-# slackline-spots
+# spots-api
