@@ -1,0 +1,8 @@
+<div class='form'>
+	<h2>Create Spot</h2>
+	<form action="{% url 'map:index' %}" method="post">
+		{% csrf_token %}
+		{{ form }}
+		<input type='submit' value='Create'>
+	</form>
+</div>

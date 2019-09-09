@@ -1,0 +1,28 @@
+<div class='spot'>
+    <h2>{{ spot.name }}</h2>
+    <p>{{ spot.description }}</p>
+    {% for info in rating_info %}
+        <h3>{{ info.0 }}</h3>
+        <p>{{ info.1 }}/10</p>
+        <div class='form'>
+            <form action="{% url 'map:ratings' spot.id %}" method="post">
+                {% csrf_token %}
+                {{ info.2 }}
+                <input type='submit' value='Rate'>
+            </form>
+        </div>
+    {% endfor %}
+    <div class='voting'>
+        <form action="{% url 'map:votes' spot.id %}" method="post">
+            {% csrf_token %}
+            {{ downvote_form }}
+            <input type='submit' value='-1'>
+        </form>
+        {{ score }}
+        <form action="{% url 'map:votes' spot.id %}" method="post">
+            {% csrf_token %}
+            {{ upvote_form }}
+            <input type='submit' value='+1'>
+        </form>
+    </div>
+</div>

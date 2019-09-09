@@ -1,0 +1,4 @@
+Django
+mysqlclient
+django-mysql
+django-cors-headers
