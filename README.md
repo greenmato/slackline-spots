@@ -9,7 +9,7 @@ Web app that allows users to add spots on a map. Users can rate and like/dislike
 /spots-app = React front-end  
 
 To set up back-end:  
-* Install Docker https://www.docker.com/
+* Install Docker and docker-compose https://www.docker.com/
 * `cd spots-api`
 * `docker-compose up --build -d`
 
